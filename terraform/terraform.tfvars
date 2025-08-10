@@ -1,6 +1,10 @@
+
 resource_group_name = "Bookstore-rg"
 location            = "Central India"
 vnet_name           = "Bookstore-vnet"
+
+#Network 
+
 address_space       = ["10.0.0.0/16"]
 subnets = {
   subnet1 = {
@@ -28,9 +32,12 @@ subnets = {
 nsg_name                       = ["db-nsg", "front-nsg", "back-nsg"]
 dns_zone_name                  = "bookstore.com"
 dns_vnet_link_name             = "vnet-link"
+
+#ACR
 acr_name                       = "Bookstoreacr"
 acr_sku                        = "Basic"
-vm_size                        = "Standard_B2as_v2"
+
+#Application Gateway
 appgw_name                     = "App-gw"
 pip_name                       = "App-gw-pip"
 backend_address_pool_name      = "frontend-vmss"
@@ -41,16 +48,15 @@ frontend_port_name             = "80"
 gateway_ip_configuration_name  = "App-gw-ip-config"
 backend_http_settings_name     = "app-gw-backend-settings"
 
-
+#VMSS
 vmss_sku = "Standard_F1s"
 username = "keshav"
 key_path = "./vmss-key.pub"
-
 custom_emails = ["keshavrajgautam20@gmail.com"]
 
+#Load Balancer
 lb_name              = "InternalLB"
 backend_lb_pool_name = "Backend-pool-for-LB"
 lb_ip_config_name    = "LB-ip-config"
 lb_sku               = "Basic"
 
-ansible_script = "./ansible.sh"

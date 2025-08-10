@@ -39,7 +39,7 @@ resource "azurerm_linux_virtual_machine" "name" {
  username = var.username
  public_key = file(var.key_path)
 }
-user_data = base64encode(file(var.ansible_script))
+
 
 network_interface_ids = [azurerm_network_interface.jumpbox-nic.id]
 

@@ -77,7 +77,7 @@ resource "azurerm_network_security_rule" "app-gw-nsg-rule" {
     description = "This rule is for app-gw required port inbound"
   network_security_group_name = azurerm_network_security_group.nsg["subnet4"].name
   resource_group_name = var.resource_group_name
-  priority = 100
+  priority = 110
   name = "AllowSpecificTrafficOnAppGW"
   direction = "Inbound"
   access = "Allow"

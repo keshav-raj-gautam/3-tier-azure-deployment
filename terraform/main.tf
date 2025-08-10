@@ -157,7 +157,7 @@ module "jumpbox" {
   username            = var.username
   key_path            = var.key_path
   jumpbox_pip_name = "Jumpbox-pip"
-  ansible_script = var.ansible_script
+  
 depends_on = [azurerm_resource_group.rg]
 }
 

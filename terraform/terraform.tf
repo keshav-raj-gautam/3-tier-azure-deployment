@@ -17,6 +17,6 @@ terraform {
 
 provider "azurerm" {
   # Configuration options
-  #CLIENT SECRET= dOy8Q~a4stIJojWGzWYyGoJvfenMZcmIxy0sYcG.
+  
   features {}
 }

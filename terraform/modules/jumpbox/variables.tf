@@ -22,6 +22,3 @@ variable "subnet_id" {
 variable "username" {
   type = string
 }
-variable "ansible_script" {
-  type = string
-}

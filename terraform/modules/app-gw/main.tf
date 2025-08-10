@@ -51,6 +51,15 @@ backend_http_settings {
   port = "80"
   protocol = "Http"
 }
+probe {
+  name                = "custom-health-probe"
+    protocol            = "Http"
+    path                = "/health"
+    interval            = 30
+    host = "127.0.0.1"
+    timeout             = 30
+    unhealthy_threshold = 3
+}
 
 request_routing_rule {
   name = var.request_routing_rule_name

@@ -7,6 +7,7 @@ variable "location" {
   type = string
 }
 
+#Network
 variable "vnet_name" {
   type = string
 
@@ -35,22 +36,17 @@ variable "nsg_name" {
   type = list(string)
 }
 
+#ACR
 variable "acr_name" {
   type = string
 
 }
 
-
 variable "acr_sku" {
   type = string
 }
 
-
-
-variable "vm_size" {
-  type = string
-}
-
+#Application Gateway
 variable "appgw_name" {
   type = string
 }
@@ -72,8 +68,6 @@ variable "gateway_ip_configuration_name" {
   type = string
 }
 
-
-
 variable "frontend_port_name" {
   type = string
 }
@@ -90,6 +84,7 @@ variable "request_routing_rule_name" {
   type = string
 }
 
+#VMSS
 variable "username" {
   type = string
 }
@@ -100,12 +95,11 @@ variable "vmss_sku" {
   type = string
 }
 
-
-
 variable "custom_emails" {
   type = list(string)
 }
 
+#Load Balancer
 variable "lb_name" {
   type = string
 }
@@ -120,6 +114,3 @@ variable "backend_lb_pool_name" {
   type = string
 }
 
-variable "ansible_script" {
-  type = string
-}
