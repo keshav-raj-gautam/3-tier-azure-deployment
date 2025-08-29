@@ -1,0 +1,34 @@
+---
+- hosts: backend
+  become: true
+  tasks:
+    - name: Clone repo
+      git:
+        repo: https://github.com/keshav-raj-gautam/3-tier-azure-deployment.git
+        dest: /home/keshav/wanderlust
+        version: main
+        update: yes
+        force: true
+
+    - name: Build backend image
+      community.docker.docker_image:
+        name: backend
+        tag: latest
+        state: present
+        source: build
+        build:
+          path: /home/keshav/wanderlust/backend
+
+    - name: Run container
+      community.docker.docker_container:
+        name: backend
+        image: backend:latest
+        state: started
+        ports:
+          - "80:8080"
+
+
+
+ 
+
+
