@@ -2,9 +2,9 @@ terraform {
 
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "Project-terraform0503"
+    organization = #Your remote project name
     workspaces {
-      name = "Infra-state"
+      name = #Your workspace name
     }
   }
   required_providers {
