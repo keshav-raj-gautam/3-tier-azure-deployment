@@ -4,7 +4,7 @@ This project demonstrates the deployment of a scalable 3-tier web application on
 
 ## Architecture Overview
 
-![Architecture](./diagrams/Infra.jpg)
+![Architecture](./diagrams/infra.jpeg)
 
 ### Components
 * Resource Group for centralized resource management  
